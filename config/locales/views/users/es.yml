@@ -1,0 +1,7 @@
+es:
+  users:
+    new:
+      title: Registrate en Piazza
+      sign_up: ¡Registrarse!
+    create:
+      welcome: "¡Bienvenido a Piazza, %{name}!"

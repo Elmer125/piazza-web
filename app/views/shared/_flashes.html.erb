@@ -1,0 +1,7 @@
+<div class="container is-fluid" data-turbo-temporary>
+  <% flash.each do |lvl, msg| %>
+    <%= tag.div class: "notification is-#{lvl} is-light has-text-centered mt-4" do %>
+      <%= msg %>
+    <% end %>
+  <% end %>
+</div>
