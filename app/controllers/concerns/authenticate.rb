@@ -36,6 +36,11 @@ module Authenticate
 
   private
 
+  def require_login
+    flash.now[:notice] = I18n.t("login_required")
+    render "sessions/new", status: :unauthorized
+  end
+
   def authenticate
     Current.app_session = authenticate_using_cookie
     Current.user = Current.app_session&.user
