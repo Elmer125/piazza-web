@@ -9,10 +9,18 @@
 #  updated_at      :datetime         not null
 #
 
-one:
-  user: one
-  organization: one
+jerry:
+  user: jerry
+  organization: jerry
 
-two:
-  user: two
-  organization: two
+kramer:
+  user: kramer
+  organization: kramer
+
+elaine:
+  user: elaine
+  organization: elaine
+
+george:
+  user: george
+  organization: george
