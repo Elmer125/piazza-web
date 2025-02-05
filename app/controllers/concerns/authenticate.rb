@@ -50,10 +50,9 @@ module Authenticate
   end
 
   def authenticate_using(data)
-    data => { user_id: , app_session:, token: }
-
+    data => { user_id: , app_session_id:, token: }
     user = User.find(user_id)
-    user.authenticate_app_session(app_session, token)
+    user.authenticate_app_session(app_session_id, token)
   rescue NoMatchingPatternError, ActiveRecord::RecordNotFound
     nil
   end
