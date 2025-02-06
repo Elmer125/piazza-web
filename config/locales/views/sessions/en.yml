@@ -6,3 +6,5 @@ en:
     create:
       success: Logged in successfully
       incorrect_details: Incorrect email or password. Please try again.
+    destroy:
+      success: You've logged out successfully!
