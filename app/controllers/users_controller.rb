@@ -18,8 +18,27 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = Current.user
+  end
+
+  def update
+    @user = Current.user
+
+    if @user.update(update_params)
+      flash[:success] = t(".success")
+      redirect_to profile_path, status: :see_other
+    else
+      render :show, status: :unprocessable_entity
+    end
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :email, :password)
+  end
+
+  def update_params
+    params.require(:user).permit(:name, :email)
   end
 end
